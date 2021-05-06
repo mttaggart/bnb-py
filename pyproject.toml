@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "bnb-py"
+version = "0.1.0"
+description = "Text-based adventure based on BHIS's \"Backdoors and Breaches\""
+authors = ["Michael Taggart <mtaggart@taggart-tech.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
