@@ -1,12 +1,10 @@
 import sys
+from game import Game
 
 MENU_OPTIONS = [
     "New Game",
     "Quit!"
 ]
-
-def game_loop():
-    print("We're in the game!")
 
 def main_menu():
     for i in range(len(MENU_OPTIONS)):
@@ -14,7 +12,10 @@ def main_menu():
 
 def menu_handler(menu_choice):
     if menu_choice == 1:
-        game_loop()
+        g = Game()
+        g.game_loop()
+        print("Thanks for playing!")
+        sys.exit()
     else:
         sys.exit()
 
@@ -24,7 +25,7 @@ def main():
     # Menu sanity check
     try:
         menu_choice = int(input("\nChoose: "))
-        if menu_choice >= len(MENU_OPTIONS):
+        if menu_choice > len(MENU_OPTIONS):
             print("Not an option!")
             main()
         menu_handler(menu_choice)

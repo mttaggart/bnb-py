@@ -1,10 +1,10 @@
 [{
-    "title": "Test Proc",
+    "title": "Firewall Log Review",
     "cardType": "Procedure",
-    "text": "This is a test card"
+    "text": "Check the firewall logs for weirdness"
 },
 {
-    "title": "Test Initial",
-    "cardType": "Initial Access",
-    "text": "This is a test access card"
+    "title": "Endpoint Analysis",
+    "cardType": "Procedure",
+    "text": "Investigate activity directly on the endpoint."
 }]
