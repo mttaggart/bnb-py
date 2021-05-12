@@ -7,4 +7,9 @@
     "title": "Endpoint Analysis",
     "cardType": "Procedure",
     "text": "Investigate activity directly on the endpoint."
+},
+{
+    "title": "Endpoint Security Protection Analysis",
+    "cardType": "Procedure",
+    "text": "Analyze Aggregated endpoint data in the management console"
 }]

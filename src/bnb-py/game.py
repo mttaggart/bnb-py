@@ -4,7 +4,7 @@ from card import Card
 class Game:
 
     config = {
-        "procs": 1,
+        "procs": 2,
         "special_procs": 1,
         "max_turns": 10
     }

@@ -20,4 +20,8 @@ class Card:
         self.text = data["text"]
         self.disabled = 0
 
-    
+class Procedure(Card):
+
+    def __init__(self, data):
+        super(data)
+        
