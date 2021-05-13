@@ -16,22 +16,26 @@
 {
     "cardType": "Persistence",
     "title": "Malicious Service",
-    "text": "The attackers add a service that starts every time the system starts."
+    "text": "The attackers add a service that starts every time the system starts.",
+    "detections": ["Endpoint Analysis", "Endpoint Security Protection Analysis"]
 },
 {
     "cardType": "Initial Compromise",
     "title": "Phish",
-    "text": "The attackers send a malicious email targeting users."
+    "text": "The attackers send a malicious email targeting users.",
+    "detections": ["Server Analysis","SIEM Log Analysis", "Netflow"]
 },
 {
     "cardType": "Pivot/Escalate",
     "title": "Kerberoasting",
-    "text": "The attackers use a 'feature' of SPNs to extract and crack service passwords."
+    "text": "The attackers use a 'feature' of SPNs to extract and crack service passwords.",
+    "detections": ["SIEM Log Analysis", "UEBA", "Honey Services", "Internal Segmentation"]
 },
 {
     "cardType": "C2/Exfil",
     "title": "HTTP As Exfil",
-    "text": "The attackers use HTTP as an exfil method."
+    "text": "The attackers use HTTP as an exfil method.",
+    "detections": ["Netflow"]
 },
 {
     "cardType": "Inject",

@@ -1,5 +1,5 @@
 import random
-from card import Card
+from .card import Card
 
 class Game:
 
@@ -26,7 +26,7 @@ class Game:
         self.deal_cards()
 
     def deal_cards(self):
-        procedures = list(filter(lambda c: c.card_type == Card.PROCEDURE, self.cards))
+        procedures = Card.filter_cards(Card.PROCEDURE, self.cards)
         for i in range(Game.config["special_procs"]):
             proc = procedures.pop(random.randint(0, len(procedures) - 1))
             self.state["special_procs"].append(proc)
