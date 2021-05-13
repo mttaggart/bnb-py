@@ -1,15 +1,40 @@
 [{
-    "title": "Firewall Log Review",
     "cardType": "Procedure",
+    "title": "Firewall Log Review",
     "text": "Check the firewall logs for weirdness"
 },
 {
-    "title": "Endpoint Analysis",
     "cardType": "Procedure",
+    "title": "Endpoint Analysis",
     "text": "Investigate activity directly on the endpoint."
 },
 {
-    "title": "Endpoint Security Protection Analysis",
     "cardType": "Procedure",
+    "title": "Endpoint Security Protection Analysis",
     "text": "Analyze Aggregated endpoint data in the management console"
+},
+{
+    "cardType": "Persistence",
+    "title": "Malicious Service",
+    "text": "The attackers add a service that starts every time the system starts."
+},
+{
+    "cardType": "Initial Compromise",
+    "title": "Phish",
+    "text": "The attackers send a malicious email targeting users."
+},
+{
+    "cardType": "Pivot/Escalate",
+    "title": "Kerberoasting",
+    "text": "The attackers use a 'feature' of SPNs to extract and crack service passwords."
+},
+{
+    "cardType": "C2/Exfil",
+    "title": "HTTP As Exfil",
+    "text": "The attackers use HTTP as an exfil method."
+},
+{
+    "cardType": "Inject",
+    "title": "Honeypots Deployed",
+    "text": "The defenders had honeypots on their network."
 }]
