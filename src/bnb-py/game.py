@@ -26,14 +26,28 @@ class Game:
         self.deal_cards()
 
     def deal_cards(self):
+        """
+        Sets up deck and kill chain for gameplay
+        """
+        
+        # Load procs
         procedures = Card.filter_cards(Card.PROCEDURE, self.cards)
+
+        # Deal special procs
         for i in range(Game.config["special_procs"]):
             proc = procedures.pop(random.randint(0, len(procedures) - 1))
             self.state["special_procs"].append(proc)
         
+        # Deal the rest of procs
         for i in range(Game.config["procs"]):
             proc = procedures.pop(random.randint(0, len(procedures) - 1))
             self.state["procs"].append(proc)
+
+        # Load kill chain
+        for c in Card.KILLCHAIN:
+            filtered_cards = Card.filter_cards(self.cards, c)
+            self.state["kill_chain"].append(random.choice(filtered_cards))
+        
 
     def game_menu(self):
         print("===GAME MENU===")
