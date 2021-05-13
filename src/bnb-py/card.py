@@ -42,6 +42,7 @@ class KillChain(Card):
     def __init__(self, data):
         super().__init__(data)
         self.detections = data["detections"]
+        self.revealed = False
 
 class Inject(Card):
     pass
