@@ -9,6 +9,7 @@ class Card:
     PIVOT = "Pivot/Escalate"
     C2EXFIL = "C2/Exfil"
     PERSISTENCE = "Persistence"
+    KILLCHAIN = [INITIAL, PIVOT, C2EXFIL, PERSISTENCE]
 
     @classmethod
     def create_card(cls, data):
