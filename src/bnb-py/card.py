@@ -4,6 +4,7 @@ class Card:
 
     CARD_FILE = "cards.json"
     PROCEDURE = "Procedure"
+    INITIAL = "Initial Compromise"
     INJECT = "Inject"
     PIVOT = "Pivot/Escalate"
     C2EXFIL = "C2/Exfil"
