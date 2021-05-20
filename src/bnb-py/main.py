@@ -1,5 +1,5 @@
 import sys
-from .game import Game
+from game import Game
 
 MENU_OPTIONS = [
     "New Game",

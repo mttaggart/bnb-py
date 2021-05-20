@@ -26,7 +26,7 @@ class Card:
             return [cls.create_card(j) for j in json.load(f)]
     
     @staticmethod
-    def filter_cards(deck, card_type):
+    def filter_cards(card_type, deck):
         return list(filter(lambda c: c.card_type == card_type, deck))
 
     def __init__(self, data):
@@ -36,7 +36,8 @@ class Card:
         self.disabled = 0
 
 class Procedure(Card):
-    pass
+    def __init__(self, data):
+        super().__init__(data)
 
 class KillChain(Card):
     def __init__(self, data):
@@ -45,4 +46,5 @@ class KillChain(Card):
         self.revealed = False
 
 class Inject(Card):
-    pass
+    def __init__(self, data):
+        super().__init__(data)

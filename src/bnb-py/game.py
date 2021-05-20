@@ -1,5 +1,5 @@
 import random
-from .card import Card
+from card import Card
 
 class Game:
 
@@ -11,6 +11,7 @@ class Game:
 
     GAME_OPTIONS = [
         "View Procedures",
+        "View Kill Chain",
         "Quit"
     ]
 
@@ -45,7 +46,7 @@ class Game:
 
         # Load kill chain
         for c in Card.KILLCHAIN:
-            filtered_cards = Card.filter_cards(self.cards, c)
+            filtered_cards = Card.filter_cards(c, self.cards)
             self.state["kill_chain"].append(random.choice(filtered_cards))
         
 
@@ -65,6 +66,26 @@ class Game:
             print(f"{i + 1}: {procs[i].title}")
             print("\n")
 
+    def print_killchain(self):
+        print("===KILL CHAIN===")
+        kill_chain = self.state["kill_chain"]
+        msg = ""
+        for i in range(len(kill_chain)):
+            kc_card = kill_chain[i]
+            msg += str(i + 1) + ": "
+            if kc_card.revealed:
+                msg += kc_card.title
+            else:
+                msg += "????"
+            msg += "\n"
+        msg += "================\n"
+    
+        print(msg)
+
+    def run_proc(self):
+        self.print_procedures()
+        proc_choice = int(input("Choose a Procedure: "))
+            
 
     def game_loop(self):
         while True:
@@ -75,6 +96,8 @@ class Game:
                     print("Not an option!")
                 elif game_choice == 1:
                     self.print_procedures()
+                elif game_choice == 2:
+                    self.print_killchain()
                 else:
                     return
             except ValueError:
