@@ -14,6 +14,21 @@
     "text": "Analyze Aggregated endpoint data in the management console"
 },
 {
+    "cardType": "Procedure",
+    "title": "Netflow",
+    "text": "Analyzing source/destination traffic on the wire"
+},
+{
+    "cardType": "Procedure",
+    "title": "Server Analysis",
+    "text": "Baselining operations to detect anomalies"
+},
+{
+    "cardType": "Procedure",
+    "title": "SIEM Log Analysis",
+    "text": "Aggregated log data enables automated detection and threat hunting"
+},
+{
     "cardType": "Persistence",
     "title": "Malicious Service",
     "text": "The attackers add a service that starts every time the system starts.",

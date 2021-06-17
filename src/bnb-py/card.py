@@ -33,11 +33,12 @@ class Card:
         self.card_type = data["cardType"]
         self.title = data["title"]
         self.text = data["text"]
-        self.disabled = 0
 
 class Procedure(Card):
     def __init__(self, data):
         super().__init__(data)
+        self.special = False
+        self.disabled = 0
 
 class KillChain(Card):
     def __init__(self, data):
